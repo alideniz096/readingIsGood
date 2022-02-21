@@ -1,0 +1,657 @@
+{
+	"info": {
+		"_postman_id": "5ba36d5d-c966-4f8f-b9f4-64c5b344eee7",
+		"name": "ReadingIsGood",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getToken",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/tokenApi/getToken?password=secret&username=user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"tokenApi",
+						"getToken"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "secret"
+						},
+						{
+							"key": "username",
+							"value": "user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewBook - bookName1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg3ODg2LCJleHAiOjE2NDUyOTA4ODZ9.uaOXodwDQQEW0VJwLl1mEFCiJ8ziMRS9zFR_6eTLLVXsQBqTPP9tCpoDzqu7P4Amo08OG6AWmaYeE5reOYIvjA"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"bookAuthor\": \"bookAuthor1\", \"bookIsbnNumber\": \"123\", \"bookName\": \"bookName1\", \"bookPrice\": 10, \"bookStock\": 100}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/addNewBook",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"addNewBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewBook - bookName2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"bookAuthor\": \"bookAuthor2\", \"bookIsbnNumber\": \"124\", \"bookName\": \"bookName2\", \"bookPrice\": 12, \"bookStock\": 185}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/addNewBook",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"addNewBook"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBookStock bookId=1&newStockValue=50",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/updateBookStock?bookId=1&newStockValue=50",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"updateBookStock"
+					],
+					"query": [
+						{
+							"key": "bookId",
+							"value": "1"
+						},
+						{
+							"key": "newStockValue",
+							"value": "50"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewCustomer - Ali Deniz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"customerAddress\": \"Ataşehir\", \"customerEmail\": \"alideniz096@gmail.com\", \"customerName\": \"Ali\", \"customerPhoneNumber\": \"5397244989\", \"customerSurname\": \"Deniz\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/addNewCustomer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"addNewCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewCustomer - Enes Deniz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"customerAddress\": \"Pendik\", \"customerEmail\": \"enesdeniz@gmail.com\", \"customerName\": \"Enes\", \"customerPhoneNumber\": \"5397244988\", \"customerSurname\": \"Deniz\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/addNewCustomer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"addNewCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewCustomer - İnci Deniz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"customerAddress\": \"Beşiktaş\", \"customerEmail\": \"incideniz@gmail.com\", \"customerName\": \"İnci\", \"customerPhoneNumber\": \"5397244980\", \"customerSurname\": \"Deniz\"}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/addNewCustomer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"addNewCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteCustomer - İnci Deniz",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/deleteCustomer?customerId=3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"deleteCustomer"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomer - Ali Deniz",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/getCustomer?customerId=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"getCustomer"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewOrder - Ali Deniz with single bookId 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"books\": [ { \"bookId\": 1, \"quantity\": 25 } ], \"customerId\": 1}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/addNewOrder",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"addNewOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewOrder - Enes Deniz with bookId 1 and 2",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"books\": [ { \"bookId\": 1, \"quantity\": 10 },{ \"bookId\": 2, \"quantity\": 5 } ], \"customerId\": 2}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/addNewOrder",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"addNewOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addNewOrder - Enes Deniz second order with bookId 1",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"books\": [ { \"bookId\": 1, \"quantity\": 5 } ], \"customerId\": 2}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/addNewOrder",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"addNewOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerOrders - Enes Deniz",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/getCustomerOrders?customerId=2&pageNumber=1&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"getCustomerOrders"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "2"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomerOrders - Ali Deniz",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/getCustomerOrders?customerId=1&pageNumber=1&pageSize=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"getCustomerOrders"
+					],
+					"query": [
+						{
+							"key": "customerId",
+							"value": "1"
+						},
+						{
+							"key": "pageNumber",
+							"value": "1"
+						},
+						{
+							"key": "pageSize",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderDetailsByOrderId - orderId=2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/getOrderDetailsByOrderId?orderId=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"getOrderDetailsByOrderId"
+					],
+					"query": [
+						{
+							"key": "orderId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getOrderDetailsByTimeInterval?endDate=2022%2F02%2F20&startDate=2022%2F02%2F18",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJpZCIsInN1YiI6InVzZXIiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjQ1Mjg4MTk0LCJleHAiOjE2NDUyOTExOTR9.9AImyjdSyNVJlfzX1sdXTAV-KaK2MCHJSaIP1euinhXIOjh5B5BJQJz1Ep8WFEt__h4b9_CRmYu9lWREPvFg0w"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/rig/getOrderDetailsByTimeInterval?endDate=2022%2F02%2F20&startDate=2022%2F02%2F18",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"rig",
+						"getOrderDetailsByTimeInterval"
+					],
+					"query": [
+						{
+							"key": "endDate",
+							"value": "2022%2F02%2F20"
+						},
+						{
+							"key": "startDate",
+							"value": "2022%2F02%2F18"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
